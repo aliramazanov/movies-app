@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-/*const requestURL = "http://www.omdbapi.com/?s=star&apikey=14628068";*/
+/*const requestURL = "https://www.omdbapi.com/?s=star&apikey=14628068";*/
 
 function Main(props) {
   const [movies, setMovies] = useState([]);
@@ -7,7 +7,7 @@ function Main(props) {
   useEffect(() => {
     const fetchMovies = async () => {
       const response = await fetch(
-        `http://www.omdbapi.com/?s=${props.searchTerm}&apikey=14628068`
+        `https://www.omdbapi.com/?s=${props.searchTerm}&apikey=14628068`
       );
       const responseData = await response.json();
       setMovies(responseData.Search);
